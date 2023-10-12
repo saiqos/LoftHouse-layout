@@ -1,0 +1,23 @@
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #D4C17F;
+    --dark: #242B33;
+    --light-dark: #2D343C;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 980px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 800px;
+    }
+}

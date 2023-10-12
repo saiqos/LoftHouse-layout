@@ -1,0 +1,103 @@
+@mixin h2 {
+    color: var(--accent);
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin input {
+    font-family: Raleway;
+    display: flex;
+    width: 255px;
+    height: 50px;
+    padding: 12px 0;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    color: #BEBEBE;
+
+    &:focus {
+        opacity: 1;
+    }
+
+    &::placeholder {
+        color: #BEBEBE;
+    }
+}
+
+@mixin nav-link {
+    >li>a {
+        color: #fff;
+        letter-spacing: 0.7px;
+        font-size: 14px;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}
+
+@mixin submit-btn {
+    display: flex;
+    width: 255px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--accent);
+    font-weight: 700;
+    font-family: Raleway;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@mixin card {
+    position: relative;
+    width: 540px;
+    height: 320px;
+
+    &::before {
+        content: '';
+        background: linear-gradient(180deg,
+                rgba(36, 43, 51, 0) 0%,
+                var(--dark) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        border: 3px double rgba(255, 255, 255, 0.4);
+        transition: opacity 0.2s ease-in;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+    p {
+        position: absolute;
+        bottom: 44px;
+        left: 50px;
+        font-size: 24px;
+    }
+}
